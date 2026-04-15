@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thayanne Oliveira | Software Engineer & Tech Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-pink: #ff85a2;
+            --dark-bg: #0a0a0c; /* Fundo quase preto */
+            --card-bg: rgba(25, 25, 30, 0.6); /* Cartão escuro translúcido */
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --accent-glow: rgba(255, 133, 162, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Blobs Flutuantes Dark */
+        .blob-1, .blob-2 {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: var(--primary-pink);
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.1; /* Bem sutil no dark mode */
+            animation: floating 15s infinite alternate ease-in-out;
+        }
+
+        .blob-1 { top: -150px; right: -100px; }
+        .blob-2 { 
+            bottom: -150px; 
+            left: -100px; 
+            background: #7000ff; /* Um toque de roxo para o contraste dark */
+            animation-delay: -7s; 
+        }
+
+        @keyframes floating {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(60px, 80px) scale(1.1); }
+            100% { transform: translate(-40px, 40px) scale(1); }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-pink);
+            box-shadow: 0 0 20px var(--accent-glow);
+            transition: 0.4s ease;
+            margin-bottom: 25px;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px var(--primary-pink);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #fff, var(--primary-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Cards Dark Glass */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 60px 20px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s all ease;
+            visibility: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(40, 40, 45, 0.8);
+            border-color: var(--primary-pink);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .icon {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-card h2 {
+            color: var(--primary-pink);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        /* Botão Neon */
+        .cta {
+            text-align: center;
+            padding-bottom: 100px;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background: var(--primary-pink);
+            color: #000;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px var(--accent-glow);
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 0 30px var(--primary-pink);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #444;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+
+    <header class="hero">
+        <div class="container">
+            <img src="_GUS0330.jpeg" alt="Thayanne" class="profile-img">
+            <h1>Destaque-se no mercado</h1>
+            <p class="subtitle">Soluções digitais e estratégicas para elevar seu posicionamento profissional ao próximo nível.</p>
+        </div>
+    </header>
+
+    <main class="services container">
+        <div class="service-card">
+            <span class="icon">📄</span>
+            <h2>Currículo Tech</h2>
+            <p>Otimização estratégica para sistemas de recrutamento e design de alto impacto.</p>
+        </div>
+        <div class="service-card">
+            <span class="icon">💼</span>
+            <h2>LinkedIn VIP</h2>
+            <p>Posicionamento de marca pessoal e SEO para atrair as melhores oportunidades.</p>
+        </div>
+        <div class="service-card">
+            <span class="icon">✍️</span>
+            <h2>Revisão Expert</h2>
+            <p>Comunicação impecável para projetos acadêmicos e profissionais.</p>
+        </div>
+        <div class="service-card">
+            <span class="icon">🔗</span>
+            <h2>Link na Bio</h2>
+            <p>Sua central de contatos personalizada com estética premium e clean.</p>
+        </div>
+    </main>
+
+    <section class="cta container">
+        <a href="https://wa.me/5586995780864" target="_blank" class="btn-whatsapp">
+            Iniciar Projeto
+        </a>
+    </section>
+
+    <footer>
+        &copy; 2026 • THAYLAB.DEV • SOFTWARE ENGINEERING STUDENT
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '40px',
+            duration: 1000,
+            delay: 200,
+            reset: false
+        });
+        sr.reveal('.profile-img', { origin: 'top' });
+        sr.reveal('h1', { delay: 400 });
+        sr.reveal('.service-card', { interval: 150 });
+        sr.reveal('.cta', { delay: 600 });
+    </script>
+</body>
+</html>
