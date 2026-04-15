@@ -1,4 +1,4 @@
-# servi-os.profissionais-
+# Serviços Profissionais 
 # 🚀 Portfolio de Serviços Profissionais - Thayanne Oliveira
 
 Este é o repositório do meu site profissional de serviços, focado em elevar o posicionamento de carreira de estudantes e profissionais da área tech. O projeto combina uma estética moderna (Dark Mode & Glassmorphism) com uma arquitetura front-end limpa e responsiva.
